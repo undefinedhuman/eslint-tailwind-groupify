@@ -1,0 +1,12 @@
+{
+  "name": "eslint-tailwind-groupify",
+  "author": {
+    "name": "Alexander Padberg <undefinedhuman>",
+    "email": "alexanderpadberg33@gmail.com",
+    "url": "alexanderpadberg.dev"
+  },
+  "description": "This ESLint rule set is designed to enhance the organization and readability of your Tailwind CSS utility classes by sorting them vertically and grouping related classes together. The rule set will automatically analyze your codebase, identify Tailwind utility classes, and apply a consistent sorting order to them. Additionally, it groups closely related classes, making your stylesheets more coherent and maintainable.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
