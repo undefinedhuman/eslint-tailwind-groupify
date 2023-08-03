@@ -1,20 +1,27 @@
+// eslint.config.js
+"use strict";
+
+// Import the ESLint plugin locally
+const eslintTailwindGroupify = require("./index");
+const vueESLintParser = require("vue-eslint-parser");
+
 module.exports = {
-    parserOptions: {
-        ecmaVersion: 2018,
-    },
     files: [ "**/*.vue" ],
-    extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended-type-checked',
-        'plugin:@typescript-eslint/stylistic-type-checked'
-    ],
-    parser: '@typescript-eslint/parser',
-    plugins: [
-        '@typescript-eslint',
-        "eslint-tailwind-groupify"
-    ],
-    rules: {
-        "eslint-tailwind-groupify/sort": "warn",
+    languageOptions: {
+        parser: vueESLintParser
     },
-    root: true
+    plugins: {
+        "eslint-tailwind-groupify": eslintTailwindGroupify
+    },
+    rules: {
+        "eslint-tailwind-groupify/sort": [
+            "warn",
+            {
+                "order": [
+                    "w",
+                    "h"
+                ]
+            }
+        ]
+    }
 }

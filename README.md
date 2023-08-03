@@ -26,7 +26,7 @@ yarn add -D eslint @undefinedhuman/eslint-tailwind-groupify
 }
 ```
 
-2. Customize the rule according to your preferences. You can configure sorting options by adding a `order` array to your ESLint configuration:
+2. Customize the rule according to your preferences. You can configure optional sorting options by adding a `order` array to your ESLint configuration:
 
 ```json
 {
@@ -35,7 +35,8 @@ yarn add -D eslint @undefinedhuman/eslint-tailwind-groupify
     "eslint-tailwind-groupify/sort": [
       "warn",
       {
-        "order": ["responsive", "hover", "focus", "active", "group-hover", "group-focus", "disabled"]
+        "sortOrder": ["responsive", "hover", "focus", "active", "group-hover", "group-focus", "disabled"],
+        "order": "asc"
       }
     ]
   }
